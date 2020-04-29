@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#cd  /home/girder/girder/girder
+girder serve -H $(hostname -i) -p 80 --mode production
+

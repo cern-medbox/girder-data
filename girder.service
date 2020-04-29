@@ -1,0 +1,13 @@
+[Unit]
+Description=Giuseppe MedBox Data
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=girder
+ExecStart=girder -H $(hostname -i) -p 80
+
+[Install]
+WantedBy=multi-user.target
